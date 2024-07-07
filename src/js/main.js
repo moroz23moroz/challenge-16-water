@@ -1,4 +1,27 @@
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('start')
-})
+window.addEventListener("DOMContentLoaded", () => {
+  const smallCups = document.querySelectorAll(".cup-small");
+  const liters = document.getElementById("liters");
+  const percentage = document.getElementById("percentage");
+  const remained = document.getElementById("remained");
+  const highlightCups = (idx) => {
+    if (
+      smallCups[idx].classList.contains("full") &&
+      !smallCups[idx].nextElementSibling.classList.contains("full")
+    ) {
+      idx--;
+    }
+    smallCups.forEach((cup, i) => {
+      if (i <= idx) {
+        cup.classList.add("full");
+      } else {
+        cup.classList.remove("full");
+      }
+    });
+  };
 
+  smallCups.forEach((cup, idx) => {
+    cup.addEventListener("click", () => {
+      highlightCups(idx);
+    });
+  });
+});
