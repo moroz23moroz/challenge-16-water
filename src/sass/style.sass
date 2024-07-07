@@ -59,9 +59,11 @@ a
     display: flex
     flex-direction: column
     overflow: hidden
+    &.end
+        display: none
     &.cup-big
         width: 150px
-        height: 330px
+        height: 349px
         border-radius: 0 0 40px 40px
     &.cup-small
         width: 50px
@@ -79,6 +81,7 @@ a
         &.full
             background-color: $fill-color
             color: $main-color
+
 .cups
     display: flex
     align-items: center
