@@ -2,42 +2,31 @@
 @import 'base/fonts'
 @import 'base/variables'
 
-html,
-body
-    height: 100%
-
 body
     margin: 0
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
-    height: 100vh
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    &.locked
-        overflow: hidden
-    @include sm
-        font-size: 16px
-
+    background: $dark-color
+    font-family: $comfortaa, sans-serif
+    color: $main-color
+    margin-bottom: 40px
 *
     box-sizing: border-box
     margin: 0
-
-html
-    scroll-behavior: smooth
 
 button
     padding: 0
     background-color: transparent
     border: none
 
-h1, h2, h3, h4
-    margin: 0
-    font-weight: normal
+h1
+    margin: 10px 0 0
+
+h3
+    margin: 10px 0
+    font-weight: 400
 
 img
     width: auto
@@ -61,3 +50,67 @@ li
 
 a
     text-decoration: none
+
+.cup
+    background-color: $main-color
+    color: $bright-color
+    border: 4px solid $bright-color
+    margin: 30px 0
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    &.cup-big
+        width: 150px
+        height: 330px
+        border-radius: 0 0 40px 40px
+    &.cup-small
+        width: 50px
+        height: 95px
+        border-radius: 0 0 15px 15px
+        background-color: rgba(255,255,255,.9)
+        cursor: pointer
+        font-size: 14px
+        align-items: center
+        text-align: center
+        margin: 5px
+        justify-content: center
+        transition: 0.3s
+        transition-timing-function: ease
+        &.full
+            background-color: $fill-color
+            color: $main-color
+.cups
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    width: 280px
+
+.remained
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    justify-content: center
+    flex: 1
+    transition: .3s
+    transition-timing-function: ease
+    & span
+        font-size: 20px
+        font-weight: bold
+    & small
+        font-size: 12px
+.percentage
+    background-color: $fill-color
+    font-size: 30px
+    font-weight: bold
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 0
+    transition: .3s
+    transition-timing-function: ease
+
+.text
+    text-align: center
+    margin: 0 0 5px
